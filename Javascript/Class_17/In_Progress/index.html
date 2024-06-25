@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <title>
+            In_Progress
+        </title>
+        <style>
+            *{
+                margin: 0;
+            }
+            .progress-wrapper{
+                width: 100vw;
+                height: 100vh;
+                background-color: bisque;
+                display: flex;
+                flex-direction: column;
+            }
+            .progress{
+                width: 100%;
+                height: 30px;
+                display: flex;
+                flex-direction: column;
+                margin-top: 50px;
+                background-color: #ccc;
+            }
+            .progress .in-progress{
+                width: 0%;
+                height: 100%;
+                background-color: blue;
+            }
+            .buttons{
+                display: flex;
+                gap: 70px;
+                margin-top: 30px;
+                margin-left: 30px;  
+            }
+            .buttons .start{
+                font-size: 20px;
+                cursor: pointer;
+            }
+            .buttons .stop{
+                font-size: 20px;
+                cursor: pointer;
+            }
+            .buttons .restart{
+                font-size: 20px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="progress-wrapper">
+            <div class="progress">
+                <div class="in-progress"></div>
+            </div> 
+            <div class="buttons">
+                <button class="start">Start</button>
+                <button class="stop">Stop</button>
+                <button class="restart">Restart</button>
+            </div> 
+        </div>
+    <script src="man.js"></script>
+    </body>
+</html>

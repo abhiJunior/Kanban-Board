@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>
+            Event Listener_2.o
+        </title>
+    </head>
+    <body>
+            <div >
+                <div>
+                    
+                    <input class="username" type="text" name="username" placeholder="enter your name">
+                    <span class="preview"></span>
+                </div>
+                
+            </div>
+    <script >
+        const previewref = document.querySelector(" span.preview");
+        const usernameref = document.querySelector("input.username");
+        usernameref.addEventListener("keyup",function(e){
+            e.preventDefault();
+            if (e.key === "Enter"){
+                previewref.innerText = e.target.value;
+            }
+        });
+    </script>
+    </body>
+
+</html>

@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Example 2</title>
+    </head>
+    <body>
+        <div>
+            <div >
+                <input class = "username"name="username" placeholder="Enter your name" type="text">
+                <span class="preview">
+                </span>
+            </div>
+            <div>
+                <button>
+                    submit
+                </button>
+            </div>
+        </div>
+        <script>
+            const previewRef = document.querySelector(".preview")
+            const inputRef = document.querySelector("input.username")
+            inputRef.addEventListener("keyup",function(e){
+                if (e.key === "Enter"){
+                    previewRef.innerText = e.target.value
+                }
+            
+            })
+        </script>
+    </body>
+</html>

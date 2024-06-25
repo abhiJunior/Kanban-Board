@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Throttle</title>
+</head>
+<body>
+    <button>Buy now</button>
+    <script>
+        const buttonRef = document.querySelector("button");
+        function throttle(fn,delay){
+            let flag = true
+            return function(){
+                if (flag){
+                    flag = false
+                    setTimeout(()=>{
+                        fn();
+                        flag = true
+                    },delay)  
+                }
+
+            }
+        }
+
+        let count = 0
+        const fn = function(){
+            count += 1
+            console.log(count)
+        }
+        const throttlefn = throttle(fn,3000)
+        buttonRef.addEventListener("click",throttlefn)
+    </script>
+</body>
+</html>

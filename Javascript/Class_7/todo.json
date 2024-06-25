@@ -1,0 +1,10 @@
+{
+    "name" : "Abhishek",
+    "pincode": 110043,
+    "address":{
+        "permanentAddress" : "Bihar",
+        "currentAddress":"Delhi"
+    },
+    "phoneno": 8826511494
+    
+}

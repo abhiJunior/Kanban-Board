@@ -1,0 +1,32 @@
+.absolute {
+    background-color: aqua;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    bottom: 30px;
+    right: 30px;
+}
+.relative {
+    background-color: azure;
+    position: relative;
+    top: 40px;
+    left: 40px;
+    bottom: 40px;
+    right: 40px;
+}
+.fixed {
+    background-color: blue;
+    position: fixed;
+    top: 50px;
+    left: 50px;
+    bottom: 50px;
+    right: 50px
+}
+.static {
+    background-color: brown;
+    position: static;
+    top: 60px;
+    left: 60px;
+    bottom: 60px;
+    right: 60px;
+}

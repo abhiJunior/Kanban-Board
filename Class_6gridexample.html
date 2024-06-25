@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>
+            About Grid
+        </title>
+        <style>
+            .item {
+                border: 1px solid #ccc;
+            }
+            
+            .container {
+                border: 1px solid red;
+                height: 100vh;
+                display: grid;
+                grid-template-areas: 
+                    "header header header"
+                    "slidebar main main"
+                    "slidebar main main"
+                    "slidebar main main"
+                    "footer1 footer1 footer1"
+                ;
+            }
+            .header {
+                grid-area: header;
+                background-color: red;
+            }
+            .slidebar {
+                grid-area: slidebar;
+                background-color: yellow;
+            }
+            .main {
+                grid-area: main;
+                background-color: blue;
+            }
+            .footer {
+                grid-area: footer1 ;
+                background-color: green;
+            }
+
+        </style>
+    </head>
+    <body>
+            
+        <div class="container">
+            <div class="header">header</div>
+            <div class="slidebar">slidebar</div>
+            <div class="main">maincontent</div>
+            <div class="footer">footer</div>
+        </div>
+        
+    </body>
+</html>

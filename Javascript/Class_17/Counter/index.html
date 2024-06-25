@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>Counter</title>
+        <style>
+            .counter-wrapper{
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                margin-left: 10px;
+            }
+            .counter-wrapper .counter{
+                font-size: 60px;
+            }
+            .button{
+                display: flex;
+                gap: 20px;
+                
+            }
+            .button .increment-button{
+                font-size: 20px;
+                cursor: pointer;
+            }
+            .button .decrement-button{
+                font-size: 20px;
+                cursor: pointer;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="counter-wrapper">
+            <div class="counter">0</div>
+            <div class="increment-decrement">Increment/Decrement:<input  value="1"></div>
+            <div class="button">
+                <button class="increment-button">+</button>
+                <button class="decrement-button">-</button>
+            </div>
+            <div class="reset">
+                <button>Reset</button>
+            </div>
+        </div>
+        <script src="main.js"></script>
+    </body>
+    
+</html>

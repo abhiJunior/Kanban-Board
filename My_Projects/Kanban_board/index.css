@@ -1,0 +1,288 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,300&display=swap');
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Roboto', sans-serif;
+}
+:root{
+    --p1 :  pink;
+    --p2 :  seagreen;
+    --p3 :  cornflowerblue;
+    --p4 :  black;
+    
+}
+
+header{
+    height: 80px;
+    width: 100%;
+    background-color: #4b4b4b;
+    display: flex;
+    flex-direction: row;
+    padding: 10px 0px;
+    box-sizing: border-box;
+
+}
+.priority-filter{
+    display: flex;
+    flex-direction: row;
+    height: 60px;
+    width: 320px;
+    background-color: #3b3b3b;
+    margin-left: 50px;
+
+}
+.priority-filter .box{
+    height: 40px;
+    width: 60px;
+    margin: 10px;
+    cursor: pointer;
+    box-sizing: border-box;    
+}
+.priority-filter .box:hover{
+    border: 2px solid #fff;
+}
+.priority-filter .box.p1{
+    background-color: var(--p1)
+}
+.priority-filter .box.p2{
+    background-color: var(--p2);
+}
+.priority-filter .box.p3{
+    background-color: var(--p3);
+}
+.priority-filter .box.p4{
+    background-color: var(--p4);
+}
+
+.quick-action{
+    height: 60px;
+    margin-left: 50px;
+    display: flex;
+    flex-direction: row;
+    background-color: #3b3b3b;
+}
+
+.quick-action .icon{
+    font-size: 30px;
+    cursor: pointer;
+    padding: 5px;
+    padding: 0px 10px;
+    display: flex;
+    align-items: center;
+}
+
+
+.quick-action .icon.add{
+    color: white;
+}
+.quick-action .icon.add:hover{
+    background-color: greenyellow;
+}
+
+.quick-action .icon.delete.enable{
+    color: red;
+    margin-left: 20px;
+
+}
+.quick-action .icon.delete{
+    color: white;
+    margin-left: 20px;
+}
+
+.quick-action .icon.delete:hover{
+    background-color: greenyellow;
+}
+.quick-action .icon:hover{
+    background-color: rgb(4, 6, 2);
+}
+
+main h1{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: 10px;
+}
+main h1{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: 10px;
+}
+
+.modal{
+    width: 50vw;
+    height: 50vh;
+    background-color: #dfe4ea;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    display: flex;
+    z-index: 1;
+}
+
+.modal .left-section{
+    width: calc(100% - 80px);
+    height: 100%;
+}
+
+.modal .left-section textarea{
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    padding: 10px;
+}
+
+.modal .right-section{
+    height: 100%;
+    width: 80px;
+    background-color: #4b4b4b;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal .right-section .priority-filter{
+    margin-left: 0px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+.modal .right-section .priority-filter .box.selected{
+    border: 2px solid #fff;
+}
+
+.modal .right-section{
+    position: relative;
+}
+
+.modal .right-section .close{
+    position: absolute;
+    right: -15px;
+    top: -15px;
+    color: red;
+    font-size: 25px;
+    cursor: pointer;
+    background-color: rgba(177, 170, 170, 0.8);
+    border-radius: 50%;
+    padding: 5px;
+    
+}
+
+.hide{
+    display: none;
+}
+.Tickets-section{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 15px;
+    gap: 15px;
+}
+
+.Tickets-section.enable-delete .Ticket-content .Ticket-delete{
+    display: block;
+}
+.Tickets-section .Ticket-content .Ticket-delete{
+    display: none;
+}
+
+
+
+
+.Tickets-section .Ticket-container{
+    min-height: 120px;
+    width: 200px;
+    background-color: #ccc;
+}
+
+.Ticket-container .Ticket-priority{
+    display: flex;
+    height: 20px;
+    width: 100%;
+   
+    
+}
+.Ticket-container [data-priority = "p1"].Ticket-priority{
+    background-color: var(--p1);
+}
+
+.Ticket-container [data-priority = "p2"].Ticket-priority{
+    background-color: var(--p2);
+}
+
+.Ticket-container [data-priority = "p3"].Ticket-priority{
+    background-color: var(--p3);
+}
+
+.Ticket-container [data-priority = "p4"].Ticket-priority{
+    background-color: var(--p4);
+}
+
+.Ticket-container .Ticket-id{
+    display: flex;
+    height: 20px;
+    width: 100%;
+    background-color: yellow;
+}
+
+.Ticket-container .Ticket-content{
+    background-color: bisque;
+}
+
+.Ticket-container .Ticket-content textarea{
+    display: flex;
+    height: 80px;
+    width: 100%;
+    border: none;
+    resize: none;
+    outline: none;
+    padding: 5px;
+    background-color: transparent;
+}
+
+.Ticket-content .locked .fa-lock{
+    display: block;
+}
+.Ticket-content .locked .fa-lock-open{
+    display: none;
+}
+
+.Ticket-content .fa-lock{
+    display: none;
+}
+.Ticket-content .fa-lock-open{
+    display: block;
+}
+
+.Ticket-content{
+    position: relative;
+}
+
+.Ticket-content .Ticket-lock{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    cursor: pointer;
+}
+
+
+.Ticket-content .Ticket-delete{
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    cursor: pointer;
+}
+
+header .quick-action .clear-filter{
+    margin-left: 50px;
+    padding: 10px;
+    cursor: pointer;
+    background-color: aliceblue;
+    color: #4b4b4b;
+}
+
+

@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <title>
+            My To Do list
+        </title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/fontawesome.min.js"></script>
+        <style>
+            
+            body{
+                background-color: bisque;
+            }
+            #root input{
+                display: flex;
+                flex-direction: row;
+                margin-left: 30%;
+                margin-top: 4%;
+                width: 500px;
+                height: 40px;
+                font-size: 20px;
+            }
+            h1{
+                flex-direction: row;
+                margin-left: 40%;
+                margin-top: 3%;
+            }
+            .container .todolist{
+                flex-direction: column;
+                margin-left: 30%;
+                
+                
+            }
+            .todolist li{
+                font-size: 30px;
+                margin-top: 10px;
+                cursor: pointer;
+
+
+            }
+            .todolist li.checked{
+               
+                color: black;
+                text-decoration: line-through;
+            }
+
+            .todolist li.remove{
+                display: none;
+            }
+
+            .todolist li:hover{
+                background-color: antiquewhite;
+            }
+
+            
+
+        </style>
+    </head>
+    <body>
+        <div id="root">
+            <div class="container">
+                <h1>My To Do list</h1>
+                <input type="text" placeholder="Enter your task" >
+                <ul class="todolist">
+                    
+                </ul>
+            </div>
+        </div>
+        <script src="todo.js">
+            
+        </script>
+    </body>
+</html>

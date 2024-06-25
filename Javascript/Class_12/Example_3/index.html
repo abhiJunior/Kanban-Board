@@ -1,0 +1,53 @@
+
+<html>
+    <head>
+        <title>Example_3</title>
+        <style>
+            .box {
+                min-width: 100px;
+                min-height: 100px;
+                border: 1px solid;
+                padding: 10px;
+                margin: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <div class="box level1">
+            Level 1
+            <div class="box level2">
+                Level 2
+                <div class="box level3">
+                    Level 3
+                </div>
+            </div>
+        </div>
+        <script>
+            const level1ref = document.querySelector(".level1");
+            const level2ref = document.querySelector(".level2");
+            const level3ref = document.querySelector(".level3");
+
+            document.addEventListener("click",function(){
+                alert("document bubbling");
+            });
+
+            document.addEventListener("click",function(){
+                alert("document capturing");
+            } , true);
+            
+            level1ref.addEventListener("click",function(e){
+                alert(e.currentTarget.className);
+            });
+
+            level2ref.addEventListener("click",function(e){
+                alert(e.currentTarget.className);
+            });
+
+            level3ref.addEventListener("click",function(e){
+                //e.stopPropagation();
+                alert(e.currentTarget.className);
+            });
+        </script>
+    </body>
+</html>
